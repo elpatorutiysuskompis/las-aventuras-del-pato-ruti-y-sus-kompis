@@ -3,69 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Las Aventuras del Pato Ruti</title>
+    <title>Las Aventuras del Pato Ruti y sus Kompis</title>
+    <link rel="stylesheet" href="index.css">
     <style>
-        body { margin: 0; font-family: sans-serif; background-color: #fdfaf5; color: #333; }
-        .hero {
-            position: relative; width: 100%; height: 400px;
-            background: url('logo.jpg') no-repeat center center; background-size: cover;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        /* Estilos para que el contador quede centrado y bonito */
+        .contador-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0; /* Espacio arriba y abajo */
         }
-        .hero::before {
-            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 51, 102, 0.6); z-index: 1;
+        
+        .pato-stats-capsula {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px 15px;
+            border-radius: 25px;
+            border: 2px solid #004466;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        nav { position: absolute; top: 0; right: 0; width: 100%; z-index: 10; }
-        nav ul { display: flex; justify-content: flex-end; list-style: none; padding: 20px; margin: 0; }
-        nav ul li { margin-left: 20px; }
-        nav ul li a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; }
-        nav ul li a:hover { color: #D4AF37; }
-        .header-content { z-index: 5; text-align: center; padding: 0 20px; }
-        .header-content h1 {
-            color: white; font-family: 'Georgia', serif; font-size: 2.2rem;
-            text-transform: uppercase; margin: 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+
+        header.hero {
+            text-align: center;
+            padding: 40px 20px;
         }
-        .main-content { max-width: 800px; margin: 50px auto; padding: 0 20px; text-align: center; }
-        .main-content h2 { color: #003366; font-size: 2rem; margin-bottom: 20px; text-transform: uppercase; }
-        .main-content p { font-size: 1.1rem; line-height: 1.7; text-align: justify; margin-bottom: 15px; }
-        footer { text-align: center; padding: 30px; color: #888; font-size: 0.8rem; }
+
+        h1.titulo-principal {
+            font-size: 40px; /* Ajustado para que quepa bien el nombre largo */
+            color: white
+            margin: 20px 0;
+            line-height: 1.1;
+        }
     </style>
 </head>
 <body>
+
     <header class="hero">
         <nav>
             <ul>
-                <li><a href="index.html">INICIO</a></li>
-                <li><a href="Ruti.html">RUTI</a></li>
-                <li><a href="poemario.html">POEMARIO</a></li>
-                <li><a href="libros.html">LIBROS</a></li>
-                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Ruti.html">Ruti</a></li>
+                <li><a href="libros.html">Libros</a></li>
+                <li><a href="poemario.html">Poemario</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <div class="header-content">
-            <h1>LAS AVENTURAS DEL PATO RUTI Y SUS KOMPIS</h1>
-        </div>
+
+        
+
+       
+
+        <h1 class="titulo-principal">LAS AVENTURAS DEL PATO RUTI Y SUS KOMPIS</h1>
     </header>
-    <main class="main-content">
-        <h2>Quien Soy</h2>
-        <img src="PRUEBA PAGINA WEB 2.jpg" alt="">
-        <p>  ulio Nieto Molina, nacido en Cartagena en Julio de 1970, con aire granadino, y un toque abaranero, aunque se declara aborigen de Mar de Cristal. Su primer poemario en vez la luz fue Agua Flamenca, autoeditado en Cartagena. Su segundo poemario es Soledad, locura y libertad (2022) editado por Aliar Ediciones. También ha autoeditado junto a un grupo de amigos un poemario titulado Quietud azul.
 
-​
+<main style="max-width: 800px; margin: 0 auto; text-align: center; padding: 40px 20px;">
+    
+    <h2 style="font-size: 30px; color: #004466; margin-bottom: 30px;">Quien Soy</h2>
 
-Desde que aprendió a escribir ha tonteado con la escritura hasta realizar sus primeros relatillos y poemarios, todos ellos guardados en el baúl de su casa. Ha publicado además varios tebeos basados en relatos y relatillos gráficos, titulados Pato Ruti y sus Kompis, con unos personajes creados por el mismo...
-RUTI nació dibujando narices, en una habitación mágica, el comedor de la casa de mis papis.
-
-Nació entre apuntes de Farmacognosia pues es un dibujo del nuevo siglo XXI, nació no me acuerdo muy bien pero por allá en los albores de finales del 2001 o principios del 2002.
-El primero fue RUTI, luego fueron llegando el resto, DURRI, el gato DÚ,..pasando por GORRI, en el 2020 y por ahora el último es HELL en el 2022.
-
+    <img src="PRUEBA PAGINA WEB 2.jpg" alt="Julio Nieto Molina" style="max-width: 250px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    
+    <div style="line-height: 1.8; color: #333; font-size: 18px; text-align: center;">
+        <p>
+            Julio Nieto Molina, nacido en Cartagena en Julio de 1970, con aire granadino, y un toque abaranero, aunque se declara aborigen de Mar de Cristal. Su primer poemario en vez la luz fue Agua Flamenca, autoeditado en Cartagena. Su segundo poemario es Soledad, locura y libertad (2022) editado por Aliar Ediciones. También ha autoeditado junto a un grupo de amigos un poemario titulado Quietud azul.
+Desde que aprendió a escribir ha tonteado con la escritura hasta realizar sus primeros relatillos y poemarios, todos ellos guardados en el baúl de su casa. Ha publicado además varios tebeos basados en relatos y relatillos gráficos, titulados Pato Ruti y sus Kompis, con unos personajes creados por el mismo... 
+RUTI nació dibujando narices, en una habitación mágica, el comedor de la casa de mis papis. Nació entre apuntes de Farmacognosia pues es un dibujo del nuevo siglo XXI, nació no me acuerdo muy bien pero por allá en los albores de finales del 2001 o principios del 2002.El primero fue RUTI, luego fueron llegando el resto, DURRI, el gato DÚ,..pasando por GORRI, en el 2020 y por ahora el último es HELL en el 2022.
 RUTI Y SUS KOMPIS, nacieron como una necesidad de expresar mi mundo interior y no es solo un dibujo o un mensaje es ponerle una nota de humor a este mundo, a este mundo que a veces es una mierda y otras veces una maravilla y como dice RUTI esta vida es una mierda maravillosa.
-
 RUTI es un pato del Mar Menor, de Mar de Cristal, aunque a veces se puede confundir con un loro, de como parlotea, pero no es de una gran verborrea, si no breve y conciso, como todos los Kompis y también como su creador, el menda lerenda, que escribe estas líneas.
 
 Así sin más, comienza una nueva aventura como es cada viñeta que empieza…
-</p>
-    </main>
-    <footer><p>&copy; Creado por Borja Angosto Nieto Todos los derechos reservados
 
+
+
+    
+        </p>
+    </div>
+
+</main>
+
+<footer style="text-align: center; padding: 50px 20px; border-top: 1px solid #eee; margin-top: 40px;">
+    <p style="color: #888; font-size: 14px;">© Creado por Borja Angosto Nieto Todos los derechos reservados</p>
+</footer>
+
+</body>
 </html>
