@@ -84,3 +84,38 @@
     text-align: center;
     max-width: 85%;
 }
+
+/* --- ESTO DOMA AL MÓVIL SÍ O SÍ --- */
+@media (max-width: 768px) {
+    .cabecera-arte {
+        height: auto !important; /* Que la montaña sea elástica */
+        padding: 15px 5px !important;
+        min-height: 200px;
+    }
+
+    .menu {
+        position: relative !important; /* Deja de flotar y se pone arriba */
+        top: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+
+    .menu ul {
+        justify-content: center !important; /* Centra INICIO, RUTI, etc. */
+        flex-wrap: wrap !important; /* SI NO CABEN, BAJAN A OTRA FILA */
+        gap: 10px !important;
+        padding: 0 !important;
+    }
+
+    .menu a {
+        font-size: 12px !important; /* Un pelín más pequeña para que quepan */
+        letter-spacing: 0.5px !important; /* Menos espacio entre letras en móvil */
+    }
+
+    .cabecera-arte h1 {
+        font-size: 1.3rem !important; /* Título más pequeño para que no pise nada */
+        margin-top: 10px !important;
+        line-height: 1.2;
+    }
+}
