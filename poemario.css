@@ -127,3 +127,7 @@ header.h1{
     margin-top: 50px !important; /* Le damos aire por arriba para que no pise al menú */
     letter-spacing: 1px !important; /* Un pelín menos de separación para que no sea tan ancho */
 }
+footer.p{
+    text-align: center;
+    justify-content: center;
+}
