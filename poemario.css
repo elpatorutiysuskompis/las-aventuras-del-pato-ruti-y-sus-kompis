@@ -1,62 +1,49 @@
-/* ESTILOS GENERALES */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
-}
 
-/* CABECERA IDÉNTICA A INICIO */
+/* RECONSTRUCCIÓN TOTAL DEL HEADER */
+/* EL CONTENEDOR (La montaña) */
 .cabecera-arte {
     width: 100%;
-    height: 60vh;
-    background-image: url('logo.jpg'); /* Tu fondo de montañas */
+    height: auto !important; /* IMPORTANTE: Que no sea 60vh */
+    background-image: url('logo.jpg');
     background-size: cover;
-    background-position: center 35%;
-    position: relative;
+    background-position: center;
     display: flex;
-    justify-content: center;
-    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Todo hacia arriba */
+    padding: 10px 0 30px 0 !important; /* Espacio justo arriba y abajo */
 }
 
-.cabecera-arte h1 {
-    
-    color: white;
-    font-size: 3.5rem;
-    font-family: 'Arial Black', sans-serif;
-    text-align: center;
-    /* ESTO ES LO QUE DA EL EFECTO DORADO/RELIEVE */
-    text-shadow: 2px 2px 0px #b8860b, 
-                 4px 4px 10px rgba(0,0,0,0.8);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-    
-
+/* EL MENÚ (Centrado y arriba) */
 .menu {
-    position: absolute;
-    bottom: 20px;   /* Lo baja a la parte inferior de la acuarela */
-    right: 50px;    /* Lo separa del borde derecho */
+    position: relative !important; /* Adios al absolute que lo mandaba a la esquina */
+    width: 100%;
     display: flex;
-    gap: 25px;      /* Les da aire entre ellos */
+    justify-content: flex-end; /* Lo lleva a la derecha como en tu foto de libros */
+    padding-right: 50px;
+    margin-bottom: 10px;
+    gap: 20px;
 }
 
-.menu a {
-    text-decoration: none;
-    /* COLOR DORADO/BEIGE PARA QUE COINCIDA */
-    color: #f5f5dc; 
-    font-weight: 900; /* Para que la letra sea más gorda */
-    font-family: 'Arial Black', sans-serif;
-    font-size: 1.1rem;
+/* EL TÍTULO (Pegado a la montaña) */
+.cabecera-arte h1 {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 2.2rem;
+    letter-spacing: 2px !important; /* Tus 2px de la suerte */
     text-transform: uppercase;
-    /* SOMBRA NEGRA PARA QUE NO SE PIERDA */
-    text-shadow: 2px 2px 4px rgba(0,0,0,1); 
-    transition: 0.3s;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
-
-.menu a:hover {
-    color: gold; /* Que brille al pasar el ratón */
-    transform: scale(1.1);
+.menu a {
+    color: white !important;
+    text-decoration: none;
+    /* --- CAMBIAMOS EL ARIAL POR LA LETRA DE LIBRO --- */
+    font-family: 'Georgia', serif !important; 
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2px !important; /* TUS 2PX DE AUTOR */
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,1); /* Para que no se pierda en el cielo */
+    transition: 0.3s ease;
 }
-

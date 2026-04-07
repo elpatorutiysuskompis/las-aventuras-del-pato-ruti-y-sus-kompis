@@ -10,35 +10,39 @@ body {
     background-color: #ffffff;
 }
 
-/* 2. TU CABECERA (LA DE LA CAPTURA QUE TE GUSTA) */
+/* 2. TU CABECERA AJUSTADA (ESTILO LIBROS) */
 .cabecera-arte {
     width: 100%;
-    height: 60vh; 
+    height: 180px !important; /* Altura fija para que no sea gigante */
     background-image: url('logo.jpg'); 
     background-size: cover; 
-    background-position: center 35%; 
+    background-position: center; 
     position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding-top: 60px;
+    padding: 0 !important;
 }
 
 .cabecera-arte h1 {
     color: white;
-    font-size: 3.5rem;
+    font-size: 2.2rem !important; /* Tamaño equilibrado */
     font-family: 'Arial Black', sans-serif;
-    text-shadow: 2px 2px 0px #b8860b, 4px 4px 10px rgba(0,0,0,0.8);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
     text-transform: uppercase;
     text-align: center;
+    letter-spacing: 2px !important; /* TUS 2PX MÁGICOS */
+    margin: 0 !important;
 }
 
-/* 3. TU MENÚ (TAL CUAL ESTABA) */
+/* 3. TU MENÚ (SUBIDO ARRIBA A LA DERECHA) */
 .menu {
-    position: absolute;
-    bottom: 20px;
-    right: 50px;
+    position: absolute !important;
+    top: 15px; /* Lo subimos para que no moleste abajo */
+    right: 30px;
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
 
 .menu a {
@@ -125,5 +129,63 @@ footer{
 
     .cierre-intervencion h1 {
         font-size: 1.8rem;
+    }
+}
+
+/* --- RESCATE DE LOS VÍDEOS --- */
+
+/* --- DISEÑO VERTICAL (VÍDEO ARRIBA, TEXTO ABAJO) --- */
+
+.contenedor {
+    max-width: 800px; /* Un poco más estrecho para que se vea mejor en vertical */
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.fila-contenido {
+    display: flex;
+    flex-direction: column; /* ¡ESTA ES LA CLAVE! Pone uno sobre otro */
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 80px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.video-container {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 700px; /* Pero no se hace gigante en pantallas grandes */
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.texto-bio {
+    width: 100%;
+    max-width: 700px;
+    text-align: left; /* El texto se queda alineado normal */
+}
+
+.titulo-video {
+    color: #003366;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-family: 'Arial Black', sans-serif;
+}
+
+/* RESPONSIVE AUTOMÁTICO */
+@media (max-width: 600px) {
+    .titulo-video {
+        font-size: 1.4rem;
+    }
+    .contenedor {
+        padding: 0 15px;
     }
 }
