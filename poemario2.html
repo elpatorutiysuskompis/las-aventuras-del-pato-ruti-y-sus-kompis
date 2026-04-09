@@ -245,15 +245,39 @@ a flor de piel.
             <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
         </article>
 
-    </div> <div style="display: flex !important; justify-content: center !important; width: 100%; margin: 80px 0; clear: both;">
+   </div> <div style="display: flex; justify-content: center; width: 100%; margin: 60px 0; clear: both;">
         <div style="display: inline-flex; border: 1px solid #adb1b8; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
+            
             <a href="poemario.html" style="padding: 14px 22px; text-decoration: none; color: #003366; border-right: 1px solid #adb1b8; background: #f0f2f2; font-weight: bold; font-size: 16px;">&lt; Anterior</a>
             <a href="poemario.html" style="padding: 14px 22px; text-decoration: none; color: #003366; border-right: 1px solid #adb1b8; background: #fff; font-size: 16px;">1</a>
             <span style="padding: 14px 22px; color: #000; border-right: 1px solid #adb1b8; background: #fff; font-weight: bold; font-size: 16px;">2</span>
-            <span style="padding: 14px 18px; color: #565959; background: #fff; border-right: 1px solid #adb1b8;">...</span>
-            <span style="padding: 14px 22px; color: #adb1b8; background: #f0f2f2; font-weight: bold; font-size: 16px; cursor: not-allowed;">Siguiente &gt;</span>
+            <a href="poemario3.html" onclick="pasarPagina(event, this.href)" style="padding: 14px 22px; text-decoration: none; color: #003366; border-right: 1px solid #adb1b8; background: #fff; font-size: 16px;">3</a>
+            <a href="poemario3.html" onclick="pasarPagina(event, this.href)" style="padding: 14px 22px; text-decoration: none; color: #003366; font-weight: bold; font-size: 16px; background: #f0f2f2;">Siguiente &gt;</a>
+            
         </div>
     </div>
+
+</main>
+
+<audio id="sonidoPagina" src="https://www.myinstants.com/media/sounds/pasar-la-hoja-de-cuaderno.mp3" preload="auto"></audio>
+
+<script>
+    // Función para el sonido
+    function pasarPagina(event, url) {
+        event.preventDefault(); 
+        var audio = document.getElementById('sonidoPagina');
+        audio.play().then(function() {
+            setTimeout(function() { window.location.href = url; }, 400);
+        }).catch(function() { window.location.href = url; });
+    }
+
+    // Función para Leer más
+    function togglePoema(btn) {
+        const texto = btn.previousElementSibling;
+        texto.classList.toggle('abierto');
+        btn.textContent = texto.classList.contains('abierto') ? "Leer menos" : "Leer más";
+    }
+</script>
 
 </main>
 

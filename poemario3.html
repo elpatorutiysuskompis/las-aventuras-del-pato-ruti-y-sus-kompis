@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poemario Vol.3 - Las Aventuras del Pato Ruti</title>
+    <link rel="stylesheet" href="poemariofinal.css">
+    <style>
+        .grid-poemas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            align-items: start;
+        }
+        .poema-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s;
+        }
+        .poema-card h3 { 
+            color: #003366; border-bottom: 2px solid #D4AF37; 
+            padding-bottom: 10px; margin-bottom: 15px; font-family: 'Georgia', serif; 
+        }
+        .poema-texto {
+            font-family: 'Georgia', serif; font-style: italic; line-height: 1.8;
+            color: #444; white-space: pre-line; max-height: 120px;
+            overflow: hidden; transition: max-height 0.5s ease;
+        }
+        .poema-texto.abierto { max-height: 3000px; }
+        .btn-leer {
+            margin-top: 15px; background: none; border: 1.5px solid #003366;
+            color: #003366; padding: 8px 20px; border-radius: 25px;
+            cursor: pointer; font-weight: bold; align-self: center;
+        }
+        .btn-leer:hover { background: #003366; color: white; }
+    </style>
+</head>
+<body>
+
+<header class="cabecera-arte">
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="Ruti.html">RUTI</a></li>
+            <li><a href="poemario.html">POEMARIO</a></li>
+            <li><a href="libros.html">LIBROS</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <h1>LAS AVENTURAS DEL PATO RUTI Y SUS KOMPIS</h1>
+</header>
+
+<main class="contenedor">
+    <h2 style="text-align: center; color: #003366; font-size: 2.2rem; margin-bottom: 40px;">POEMARIO - VOL.3</h2>
+    
+   <div class="grid-poemas">
+            
+            <article class="poema-card">
+                <h3>Pimientos</h3>
+                <div class="poema-texto">Italiano, 
+                murciano, 
+                de bola 
+                que cuánto 
+                más pasa 
+                el tiempo 
+                más lo ¨añoras¨. 
+
+                Y al grito 
+                del cocinero 
+                ¡vete a hacer  
+                pimientos! 
+                
+                el pimiento...
+
+                <strong>Julio Nieto Molina</strong></div>
+                <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+            </article>
+
+            <article class="poema-card">
+                <h3>El Rey de la Cocina</h3>
+                <div class="poema-texto">AJO 
+                TÚ ERES LA CABEZA, 
+                EL QUE DA FUERZA 
+                Y BRÍO 
+                AL TOMATE, 
+                JUNTO AL ACEITE  
+                Y LA SAL 
+                TE AGREGAS AL TRÍO 
+                DE ÉSTA ENSALADA MEDITERRÁNEA 
+                QUE ALTERA NUESTROS SENTIDOS, 
+                VOLVIENDO LOCA  
+                NUESTRAS CABEZAS. 
+
+                ERES EL REY 
+                DE LA COCINA.
+
+                <strong>Julio Nieto Molina</strong></div>
+                <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+            </article>
+
+            <article class="poema-card">
+                <h3>La Cebolla</h3>
+                <div class="poema-texto">CEBOLLA 
+                TÚ QUE PROVOCAS 
+                EL LLANTO, 
+                ASÍ, SIN MÁS. 
+
+                MEZCLANDO LOS SABORES 
+                DÁNDOLE A LA ENSALADA 
+                ESE TOQUE DE CAMPO 
+                LLUVIA Y TIERRA. 
+
+                AROMATIZANDO EL PALADAR, 
+                DÁNDOLE FRESCOR 
+                A TÚ CANTO. 
+
+                LA QUE ALEGRA 
+                A LA VERDURA  
+                EN ÉSTA LOCURA.
+
+                <strong>Julio Nieto Molina</strong></div>
+                <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+            </article>
+
+            <article class="poema-card">
+                <h3>La Aceituna</h3>
+                <div class="poema-texto">Voy andando 
+                Por la luna… 
+                Me encuentro 
+                Una aceituna… 
+                
+                Me la como… 
+                Escupo el hueso… 
+                Dirección a la Tierra… 
+                
+                Se transforma… 
+                En meteorito mortal… 
+                Y todos a tomar por… 
+                
+                !cuidado! 
+                Con la aceituna 
+                Que la carga 
+                El diablo…
+
+                <strong>Julio Nieto Molina</strong></div>
+                <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+            </article>
+
+            <article class="poema-card">
+                <h3>¡Lechuga!</h3>
+                <div class="poema-texto">LECHUGA, 
+                TÚ QUE ESTÁS TAN TRANQUILA 
+                EN LA TIERRA 
+                Y VENGA 
+                UN TÍO BANDIDO 
+                TE PONGA EN UNA FUENTE 
+                Y COMA 
+                CON SAL, VINAGRE Y ACEITE 
+                Y LO QUE SOBRE.... 
+                AL OLVIDO.
+
+                <strong>Julio Nieto Molina</strong></div>
+                <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+            </article>
+
+            <article class="poema-card">
+                <h3>Pepino</h3>
+                <div class="poema-texto">PEPINO, 
+                QUE CULPA TIENE EL PEPINO 
+                DE ESTAR  
+                TAN TRANQUILO 
+                EN SU MATA 
+                Y VENGA UN TÍO DAÑINO, 
+                LO PARTA, 
+                LO PONGA EN UN PLATO 
+                Y SE LO COMA 
+                CON SAL  
+                Y UN TRAGO DE VINO.
+
+                <strong>Julio Nieto Molina</strong></div>
+                <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+            </article>
+
+        </div>
+    </main>
+
+    <div style="display: flex; justify-content: center; width: 100%; margin: 60px 0; clear: both;">
+        <div style="display: inline-flex; border: 1px solid #adb1b8; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
+            <a href="poemario2.html" style="padding: 14px 22px; text-decoration: none; color: #003366; border-right: 1px solid #adb1b8; background: #f0f2f2; font-weight: bold; font-size: 16px;">&lt; Anterior</a>
+            <a href="poemario.html" style="padding: 14px 22px; text-decoration: none; color: #003366; border-right: 1px solid #adb1b8; background: #fff; font-size: 16px;">1</a>
+            <a href="poemario2.html" style="padding: 14px 22px; text-decoration: none; color: #003366; border-right: 1px solid #adb1b8; background: #fff; font-size: 16px;">2</a>
+            <span style="padding: 14px 22px; color: #000; border-right: 1px solid #adb1b8; background: #fff; font-weight: bold; font-size: 16px;">3</span>
+            <span style="padding: 14px 22px; color: #adb1b8; background: #f0f2f2; font-weight: bold; font-size: 16px; cursor: not-allowed;">Siguiente &gt;</span>
+        </div>
+    </div>
+
+    <audio id="sonidoPagina" src="https://www.myinstants.com/media/sounds/pasar-la-hoja-de-cuaderno.mp3" preload="auto"></audio>
+
+<script>
+    function pasarPagina(event, url) {
+        event.preventDefault(); 
+        var audio = document.getElementById('sonidoPagina');
+        audio.play().then(function() {
+            setTimeout(function() { window.location.href = url; }, 400);
+        }).catch(function() {
+            window.location.href = url;
+        });
+    }
+
+    function togglePoema(btn) {
+        const texto = btn.previousElementSibling;
+        texto.classList.toggle('abierto');
+        // Esto cambia el texto del botón al pinchar
+        if (texto.classList.contains('abierto')) {
+            btn.textContent = "Leer menos";
+        } else {
+            btn.textContent = "Leer más";
+        }
+    }
+</script>
+
+    <footer>&copy Creado por Borja Angosto Nieto
+    </footer>

@@ -1,0 +1,20 @@
+.video-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px; /* Un poco más de aire en los bordes */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 1000px; /* Aumentamos de 800 a 1000 para que sea gigante */
+    width: 95%; /* Que use casi todo el ancho disponible */
+    text-align: center;
+    margin: 0 auto;
+}
+
+.reproductor-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Mantiene la proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000;
+    margin: 0 auto; /* Asegura que el vídeo esté centrado dentro de la tarjeta */
+}
