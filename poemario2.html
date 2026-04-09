@@ -3,45 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Las Aventuras del Pato Ruti y sus Kompis</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Poemario 2 - Las Aventuras del Pato Ruti</title>
+    <link rel="stylesheet" href="poemariofinal.css">
     <style>
-        /* Estilos para que el contador quede centrado y bonito */
-        .contador-container {
+        .grid-poemas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+            align-items: start;
+        }
+        .poema-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px 0; /* Espacio arriba y abajo */
+            flex-direction: column;
+            transition: 0.3s;
         }
-        
-        .pato-stats-capsula {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 5px 15px;
-            border-radius: 25px;
-            border: 2px solid #004466;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .poema-card h3 { 
+            color: #003366; border-bottom: 2px solid #D4AF37; 
+            padding-bottom: 10px; margin-bottom: 15px; font-family: 'Georgia', serif; 
         }
+        .poema-texto {
+            font-family: 'Georgia', serif; font-style: italic; line-height: 1.8;
+            color: #444; white-space: pre-line; max-height: 120px;
+            overflow: hidden; transition: max-height 0.5s ease;
+        }
+        .poema-texto.abierto { max-height: 3000px; }
+        .btn-leer {
+            margin-top: 15px; background: none; border: 1.5px solid #003366;
+            color: #003366; padding: 8px 20px; border-radius: 25px;
+            cursor: pointer; font-weight: bold; align-self: center;
+        }
+        .btn-leer:hover { background: #003366; color: white; }
 
-        header.hero {
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        h1.titulo-principal {
-            h1.titulo-principal {
-    font-size: 40px; /* Ajustado para que quepa bien el nombre largo */
-    color: white;
-    margin: 20px 0;
-    line-height: 1.1;
-}
+        @media (max-width: 900px) {
+            .grid-poemas { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-
 
 <header class="cabecera-arte">
     <nav class="menu">
@@ -56,86 +60,214 @@
     <h1>LAS AVENTURAS DEL PATO RUTI Y SUS KOMPIS</h1>
 </header>
 
-<div style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+<main class="contenedor">
+    <h2 style="text-align: center; color: #003366; font-size: 2.2rem; margin: 40px 0;">POEMARIO - VOL. 2</h2>
+    
+    <div class="grid-poemas">
         
-        <div class="tarjeta-video" style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15); border: 1px solid #eee;">
-            
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                <iframe src="https://www.youtube.com/embed/zHD4FJ7TcxI" 
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
-                        allowfullscreen>
-                </iframe>
-            </div>
+        <article class="poema-card">
+            <h3>Y la vida</h3>
+            <div class="poema-texto">Y la vida 
+Pasa enseguida  
+Y seguida(2)... 
+Enrédate por  
+Las ramas… 
+Estate en 
+La cama 
+Sí es preciso… 
+Hazte un día cero 
+Y poko a poko  
+Levanta el vuelo 
+Despegando del suelo… 
+Y…la vida 
+Pasa enseguida  
+Y seguida(2)... 
+Hazte un lío 
+Y deshila, 
+Tómate la vida 
+Trago a trago, 
+Cómo si no fueras  
+A vivir otro día, 
+Y…la vida  
+Pasa enseguida 
+Y seguida(2)...
 
-            <div style="padding: 30px; text-align: center;">
-                <h3 style="color: #003366; font-family: 'Georgia', serif; font-size: 26px; margin-bottom: 15px;">1. AGUA FLAMENCA 2015</h3>
-                <p style="color: #444; font-size: 19px; line-height: 1.8;">
-                    Disfruta de este momento especial donde la poesía de Julio cobra vida en el escenario. Una presentación llena de sentimiento grabada en directo.
-                </p>
-            </div>
+<strong>NUMERO 1 LA VIDA</strong></div>
+            <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+        </article>
+
+        <article class="poema-card">
+            <h3>Nunca se fue</h3>
+            <div class="poema-texto">NUNCA SE FUE… 
+SE CONOCIÓ  
+A SI MISMA… 
+YA NO HAY 
+QUIÉN LE 
+PARE LOS PIES… 
+RECUPERÓ  
+DE NUEVO  
+SU NIÑEZ… 
+YA ERA HORA 
+DE SU LIBERTAD… 
+ESTABA ENCERRADA 
+IN UNA CÚPULA  
+DE CRISTAL…
+
+<strong>2 POEMA NUNCA SE FUE</strong></div>
+            <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+        </article>
+
+        <article class="poema-card">
+            <h3>Cuando el Universo Habla</h3>
+            <div class="poema-texto">Cuando  
+El Universo  
+Habla 
+Me salen  
+estos versos… 
+Me dan  
+Los amaneceres 
+Cuando pienso 
+En tí… 
+Yo no soy  
+Cómo otros  
+Y no estaba  
+Equivocado… 
+Con los amigos  
+Bebemos 
+Cerves y vinos 
+Con humo verde… 
+Y cuando  
+Voy solo 
+El que manda  
+Soy yo… 
+Yo no soy  
+Cómo otros  
+Y no estaba  
+Equivocado…
+
+<strong>Julio Nieto Molina</strong></div>
+            <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+        </article>
+
+        <article class="poema-card">
+            <h3>El que manda soy yo</h3>
+            <div class="poema-texto">Cuando  
+El Universo  
+Habla 
+Me salen  
+estos versos… 
+Me dan  
+Los amaneceres 
+Cuando pienso 
+En tí… 
+Yo no soy  
+Cómo otros  
+Y no estaba  
+Equivocado… 
+Con los amigos  
+Bebemos 
+Cerves y vinos 
+Con humo verde… 
+Y cuando  
+Voy solo 
+El que manda  
+Soy yo… 
+Yo no soy  
+Cómo otros  
+Y no estaba  
+Equivocado…
+
+<strong>Julio Nieto Molina</strong></div>
+            <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+        </article>
+
+        <article class="poema-card">
+            <h3>Ella</h3>
+            <div class="poema-texto">Ella  
+Siempre  
+Baila sola 
+Ella siempre  
+Va a su bola 
+Bebe  
+Coñac con Coca cola  
+De vez  
+En cuando… 
+Se fuma  
+Cigarrillos 
+Con sorpresa 
+A Ella 
+Siempre 
+Te la encuentras  
+Por la calle… 
+Cuando hablas 
+Con ella 
+Sus palabras  
+Te embrujan 
+Con sus labios… 
+Y…no sabes 
+Si estás en el cielo 
+O en el infierno…
+
+<strong>Julio Nieto Molina</strong></div>
+            <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+        </article>
+
+        <article class="poema-card">
+            <h3>Flores</h3>
+            <div class="poema-texto">Flores de amor 
+flores de recuerdo 
+flores de citas 
+flores de detalle 
+flores de muerte 
+flores de cada momento. 
+Con su aroma, 
+invaden las emociones. 
+Perecederas, 
+como la vida misma, 
+como la vida de los mortales, 
+como todos 
+nuestros instantes. 
+Renovadas 
+para alegrar 
+nuestra alma, 
+nuetra alegría. 
+Algunas son bendecidas 
+con las lágrimas, 
+con las risas, 
+con la inspiracion, 
+con un beso. 
+Todos éstos sentimientos 
+rompen con la razón 
+y salen todos  
+a flor de piel.
+
+<strong>Julio Nieto Molina</strong></div>
+            <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+        </article>
+
+    </div> <div style="display: flex !important; justify-content: center !important; width: 100%; margin: 80px 0; clear: both;">
+        <div style="display: inline-flex; border: 1px solid #adb1b8; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
+            <a href="poemario.html" style="padding: 14px 22px; text-decoration: none; color: #003366; border-right: 1px solid #adb1b8; background: #f0f2f2; font-weight: bold; font-size: 16px;">&lt; Anterior</a>
+            <a href="poemario.html" style="padding: 14px 22px; text-decoration: none; color: #003366; border-right: 1px solid #adb1b8; background: #fff; font-size: 16px;">1</a>
+            <span style="padding: 14px 22px; color: #000; border-right: 1px solid #adb1b8; background: #fff; font-weight: bold; font-size: 16px;">2</span>
+            <span style="padding: 14px 18px; color: #565959; background: #fff; border-right: 1px solid #adb1b8;">...</span>
+            <span style="padding: 14px 22px; color: #adb1b8; background: #f0f2f2; font-weight: bold; font-size: 16px; cursor: not-allowed;">Siguiente &gt;</span>
         </div>
-
     </div>
 
-    <div style="max-width: 800px; margin: 60px auto; padding: 0 20px;">
-        
-        <div class="tarjeta-video" style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15); border: 1px solid #eee;">
-            
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                <iframe src="https://www.youtube.com/embed/Dq8PJceQ828" 
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
-                        allowfullscreen>
-                </iframe>
-            </div>
+</main>
 
-            <div style="padding: 30px; text-align: center;">
-                <h3 style="color: #003366; font-family: 'Georgia', serif; font-size: 26px; margin-bottom: 15px;">2. RECITAL ORGULLO LOCO</h3>
-                <p style="color: #444; font-size: 19px; line-height: 1.8;">
-                    Un recital cargado de fuerza y sinceridad. En este vídeo, Julio comparte sus poemas en un evento dedicado a la visibilidad y el orgullo de la salud mental, acompañado de música en directo.
-                </p>
-            </div>
-        </div>
+<footer style="text-align: center; padding: 40px 0; color: #666; font-size: 14px; width: 100%;">
+    <p>© 2026 - Creado por Borja Angosto Nieto</p>
+</footer>
 
-    </div>
+<script>
+    function togglePoema(btn) {
+        const texto = btn.previousElementSibling;
+        texto.classList.toggle('abierto');
+        btn.textContent = texto.classList.contains('abierto') ? "Leer menos" : "Leer más";
+    }
+</script>
 
-    <div style="max-width: 800px; margin: 60px auto; padding: 0 20px;">
-        
-        <div class="tarjeta-video" style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15); border: 1px solid #eee;">
-            
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                <iframe src="https://www.youtube.com/embed/hdzaNp7L6HM" 
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
-                        allowfullscreen>
-                </iframe>
-            </div>
-
-            <div style="padding: 30px; text-align: center;">
-                <h3 style="color: #003366; font-family: 'Georgia', serif; font-size: 26px; margin-bottom: 15px;">3. SOLEDAD, LOCURA Y LIBERTAD</h3>
-                <p style="color: #444; font-size: 19px; line-height: 1.8;">
-                    La presentación oficial del libro que da nombre a esta etapa. Un recorrido por poemas como "Dulce Misterio" y "Solo se vive una vez", donde Julio nos invita a saborear cada momento de la vida.
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-    <div style="max-width: 800px; margin: 60px auto; padding: 0 20px;">
-        
-        <div class="tarjeta-video" style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15); border: 1px solid #eee;">
-            
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                <iframe src="https://www.youtube.com/embed/U_5YqT2M85E" 
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
-                        allowfullscreen>
-                </iframe>
-            </div>
-
-            <div style="padding: 30px; text-align: center;">
-                <h3 style="color: #003366; font-family: 'Georgia', serif; font-size: 26px; margin-bottom: 15px;">4. BIBLIOTECA REGIONAL DE MURCIA</h3>
-                <p style="color: #444; font-size: 19px; line-height: 1.8;">
-                    Presentación del proyecto de fanzines "Inino Michirón" y "Cinejena". Una actuación donde la música y la rebeldía se unen para dar vida a nuevas formas de expresión artística en un espacio emblemático.
-                </p>
-            </div>
-        </div>
-
-    </div>
+</body>
+</html>

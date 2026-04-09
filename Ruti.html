@@ -115,10 +115,41 @@
         </div>
 
     </main>
+<audio id="sonidoPagina" src="https://www.myinstants.com/media/sounds/pasar-la-hoja-de-cuaderno.mp3" preload="auto"></audio>
+
+<script>
+    function pasarPagina(event, url) {
+        event.preventDefault();
+        var audio = document.getElementById('sonidoPagina');
+
+        // Intento de reproducción con chivato de errores
+        audio.play().then(function() {
+            setTimeout(function() {
+                window.location.href = url;
+            }, 500);
+        }).catch(function(error) {
+            // ESTO NOS DIRÁ EL FALLO REAL
+            alert("¡Ojo! El sonido no carga. Error: " + error.message);
+            window.location.href = url;
+        });
+    }
+</script>
+    <div style="display: flex !important; justify-content: center !important; width: 100%; margin: 60px 0; clear: both;">
+        <div style="display: inline-flex; border: 1px solid #adb1b8; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
+            <span style="padding: 14px 22px; color: #adb1b8; background: #f0f2f2; font-weight: bold; font-size: 16px; cursor: not-allowed; border-right: 1px solid #adb1b8;">&lt; Anterior</span>
+            <span style="padding: 14px 22px; color: #000; border-right: 1px solid #adb1b8; background: #fff; font-weight: bold; font-size: 16px;">1</span>
+            
+            <a href="Ruti2.html" onclick="pasarPagina(event, this.href)" style="padding: 14px 22px; text-decoration: none; color: #003366; border-right: 1px solid #adb1b8; background: #fff; font-size: 16px;">2</a>
+            
+            <a href="Ruti2.html" onclick="pasarPagina(event, this.href)" style="padding: 14px 22px; text-decoration: none; color: #003366; background: #f0f2f2; font-weight: bold; font-size: 16px;">Siguiente &gt;</a>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2026 - Creado por Borja Angosto Nieto</p>
     </footer>
+</div>
+  
 
 </body>
 </html>
