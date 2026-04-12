@@ -79,3 +79,26 @@ p {
         text-align: left; /* En móvil se lee mejor así */
     }
 }
+
+@media (max-width: 768px) {
+    /* Esto hace que la foto y el texto no choquen de lado */
+    .contenedor, main {
+        display: flex;
+        flex-direction: column; /* Foto arriba, texto abajo */
+        align-items: center;
+        padding: 10px;
+    }
+
+    img[src*="julio"] {
+        width: 180px !important;
+        margin: 0 auto 20px auto !important; /* Centrada y con espacio abajo */
+        float: none !important; /* Quitamos cualquier alineación lateral */
+    }
+
+    p {
+        font-size: 18px;
+        text-align: left;
+        width: 100%; /* Que el texto use todo el ancho disponible */
+        padding: 0 10px;
+    }
+}
