@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poemario 4 - Las Aventuras del Pato Ruti</title>
+    <link rel="stylesheet" href="poemario.css">
+    <style>
+        body { background-color: #e2d1b3; margin: 0; padding: 0; }
+        .grid-poemas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+            align-items: start;
+        }
+        .poema-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #d4c1a1;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s;
+        }
+        .poema-card h3 { 
+            color: #003366; border-bottom: 2px solid #D4AF37; 
+            padding-bottom: 10px; margin-bottom: 15px; font-family: 'Georgia', serif; 
+        }
+        .poema-texto {
+            font-family: 'Georgia', serif; font-style: italic; line-height: 1.8;
+            color: #444; white-space: pre-line; max-height: 120px;
+            overflow: hidden; transition: max-height 0.5s ease;
+        }
+        .poema-texto.abierto { max-height: 3000px; }
+        .btn-leer {
+            margin-top: 15px; background: none; border: 1.5px solid #003366;
+            color: #003366; padding: 8px 20px; border-radius: 25px;
+            cursor: pointer; font-weight: bold; align-self: center;
+        }
+        .btn-leer:hover { background: #003366; color: white; }
+
+        @media (max-width: 900px) {
+            .grid-poemas { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="cabecera-arte">
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="Ruti.html">RUTI</a></li>
+            <li><a href="poemario.html">POEMARIO</a></li>
+            <li><a href="libros.html">LIBROS</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <h1 style="text-align: center; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); padding-top: 60px;">LAS AVENTURAS DEL PATO RUTI Y SUS KOMPIS</h1>
+</header>
+
+<main class="contenedor">
+    <h2 style="text-align: center; color: #003366; font-size: 2.2rem; margin: 40px 0;">POEMARIO - VOL. 4</h2>
+    
+    <div class="grid-poemas">
+        
+        <article class="poema-card">
+            <h3>Hoy es el día</h3>
+            <div class="poema-texto">Mi mala suerte  
+            Tiene que cambiar, 
+            Hoy me levanté  
+            el día era  
+            Azul claro, 
+            Una brisa 
+            Abrió mis ojos, 
+            Por dentro  
+            Vi  
+            Que era un  
+            día distinto… 
+            Hoy es el día  
+            Hoy es el día… 
+            El calendario  
+            Ya no tiene  
+            Todos los días  
+            En rojo… 
+            Una brisa, 
+            Abrió mis ojos, 
+            Por dentro vi, 
+            Un mundo 
+            Un universo  
+            De colores… 
+            Hoy es el día  
+            Hoy es el día  
+            Hoy será el día…
+            <strong>Julio Nieto Molina</strong></div>
+            <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+        </article>
+
+        <article class="poema-card">
+    <h3>Yo no he cambiado</h3>
+    <div class="poema-texto">Siempre esperando  
+    Que un Cometa  
+    Destruya el mundo… 
+    O un platillo volante 
+    Me saque  
+    De este infierno… 
+    Yo no he cambiado 
+    Fuistes tú  
+    Quien acabó  
+    Con todo  
+    Nuestro Mundo… 
+    Tú querías libertad 
+    Ahora vas con otros…  
+    Yo Cómo siempre, 
+    Desde mi casa 
+    Veo las nubes pasar 
+    Las gaviotas volar… 
+    Ya soy libre 
+    Cuando 
+    Me acuerdo de tí. 
+    <strong>Julio Nieto Molina</strong></div>
+    <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+</article>
+
+        <article class="poema-card">
+    <h3>Icue</h3>
+    <div class="poema-texto">Icue pintado 
+    Icue fotografiado 
+    Icue inmortalizado… 
+    En estatua… 
+    Libre de pisadas, 
+    Libre de avatares diarios… 
+    Fuiste estatua 
+    Ahora fuente 
+    Otrora ajardinado… 
+    Tus correrías  
+    Te hicieron  
+    Sobrevivir 
+    A las penurias 
+    Del tiempo… 
+    Ahora eres plaza… 
+    Convirtiéndote  
+    En ese anónimo  
+    Cartagenero inmortal 
+    Y universal… 
+    Te hicisteis hombre 
+    Luchando desde niño… 
+    Ahora como niño  
+    Ahora como icue 
+    Ves pasar el tiempo 
+    De foráneos y coetáneos… 
+    Ahí está… 
+    El icue… 
+    Resistiendo!!
+    <strong>Julio Nieto Molina</strong></div>
+    <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+</article>
+
+       <article class="poema-card">
+    <h3>Dulce Sol</h3>
+    <div class="poema-texto">En mis tiempos  
+    Muertos, 
+    Dibujo bocetos 
+    Pensando en tí… 
+    Aún recuerdo  
+    Tus labios 
+    De miel 
+    Besándome, 
+    Dejándome  
+    Un dulce sabor… 
+    Tú cabello 
+    Enredado  
+    Con el mío  
+    Cuando  
+    Hacemos el amor… 
+    Tus ojos 
+    Clavándose  
+    En los míos  
+    Como dos estrellas… 
+    Nunca olvidaré  
+    Tú nombre… 
+    Oohh Dulce Sol 
+    Oohh Dulce Sol
+    <strong>Julio Nieto Molina</strong></div>
+    <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+</article>
+
+        <article class="poema-card">
+    <h3>Marte</h3>
+    <div class="poema-texto">Que culpita  
+    Tuvo Marte 
+    Que no  
+    Arraigaran  
+    Las matas… 
+    En la Tierra 
+    Estuvieron  
+    Bien plantás 
+    Y entre ellas 
+    Caminaban 
+    Unos monos  
+    Llamados  
+    Seres humanos… 
+    Que culpita  
+    Tuvo Marte 
+    De ser 
+    Un desierto rocoso… 
+    La Tierra 
+    Un vergel 
+    Despreciado 
+    Porque ya  
+    Existía  
+    Y estos 
+    Seres humanos 
+    Tan monos  
+    Que no  
+    Supieron  
+    Apreciar...
+    <strong>Julio Nieto Molina</strong></div>
+    <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+</article>
+
+     <article class="poema-card">
+            <h3>La ratonera</h3>
+            <div class="poema-texto">El paraíso  
+            Está a su final… 
+            No ya, porque 
+            No hemos sabido 
+            Cuidarlo o 
+            Estar a la altura  
+            De algo tan grande, 
+            Bello, bueno y bonito 
+            Cómo nuestro hogar, 
+            El atolón,  
+            La isla, 
+            El planeta Tierra… 
+            No quiero mencionar  
+            Ni razas 
+            Ni momentos históricos  
+            Solo decir 
+            Que los humanos 
+            Tanto a los protagonistas  
+            Cómo al público  
+            Incluso a los marginados  
+            Hemos convertido 
+            Un paraíso  
+            En una ratonera… 
+            No hay planeta B 
+            And aún más, 
+            Nunca habrá otro planeta 
+            Tan impresionante 
+            Cómo el nuestro, 
+            Pero el planeta fluye 
+            Con o sin nosotros.
+            <strong>Julio Nieto Molina</strong></div>
+            <button class="btn-leer" onclick="togglePoema(this)">Leer más</button>
+        </article>
+
+   </div> 
+</div> 
+
+<div style="display: block !important; width: 100% !important; text-align: center !important; margin: 60px 0 !important; clear: both !important;">
+    <div style="display: inline-flex !important; border: 1px solid #adb1b8 !important; border-radius: 8px !important; overflow: hidden !important; background: #fff !important; box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;">
+        
+        <a href="poemario3.html" onclick="pasarPagina(event, this.href)" style="padding: 12px 18px !important; text-decoration: none !important; color: #003366 !important; border-right: 1px solid #adb1b8 !important; background: #fff !important; font-weight: bold !important; font-size: 16px !important; font-family: sans-serif !important;">&lt; Anterior</a>
+        
+        <a href="poemario.html" onclick="pasarPagina(event, this.href)" style="padding: 12px 18px !important; text-decoration: none !important; color: #003366 !important; border-right: 1px solid #adb1b8 !important; background: #fff !important; font-size: 16px !important;">1</a>
+        <a href="poemario2.html" onclick="pasarPagina(event, this.href)" style="padding: 12px 18px !important; text-decoration: none !important; color: #003366 !important; border-right: 1px solid #adb1b8 !important; background: #fff !important; font-size: 16px !important;">2</a>
+        <a href="poemario3.html" onclick="pasarPagina(event, this.href)" style="padding: 12px 18px !important; text-decoration: none !important; color: #003366 !important; border-right: 1px solid #adb1b8 !important; background: #fff !important; font-size: 16px !important;">3</a>
+        
+        <span style="padding: 12px 18px !important; background: #e2d1b3 !important; color: #000 !important; font-weight: bold !important; border-right: 1px solid #adb1b8 !important; font-size: 16px !important; font-family: sans-serif !important;">4</span>
+        
+        <a href="poemario5.html" onclick="pasarPagina(event, this.href)" style="padding: 12px 18px !important; text-decoration: none !important; color: #003366 !important; border-right: 1px solid #adb1b8 !important; background: #fff !important; font-size: 16px !important;">5</a>
+        
+        <a href="poemario5.html" onclick="pasarPagina(event, this.href)" style="padding: 12px 18px !important; text-decoration: none !important; color: #003366 !important; background: #f0f2f2 !important; font-weight: bold !important; font-size: 16px !important;">Siguiente &gt;</a>
+    </div>
+</div>
+</main>
+
+<audio id="sonidoPagina" src="https://www.myinstants.com/media/sounds/pasar-la-hoja-de-cuaderno.mp3" preload="auto"></audio>
+
+<script>
+    function pasarPagina(event, url) {
+        event.preventDefault(); 
+        var audio = document.getElementById('sonidoPagina');
+        if (audio) {
+            audio.play().then(function() {
+                setTimeout(function() { window.location.href = url; }, 400);
+            }).catch(function() { window.location.href = url; });
+        } else {
+            window.location.href = url;
+        }
+    }
+
+    function togglePoema(btn) {
+        const texto = btn.previousElementSibling;
+        texto.classList.toggle('abierto');
+        btn.textContent = texto.classList.contains('abierto') ? "Leer menos" : "Leer más";
+    }
+</script>
+
+<footer style="text-align: center; padding: 60px 0 40px 0; width: 100%; clear: both;">
+    <p style="font-family: 'Georgia', serif; color: #333; font-size: 18px; margin: 0; letter-spacing: 1px;">
+        © creado por <strong>Borja Angosto Nieto</strong>
+    </p>
+</footer>
+
+</body>
+</html>

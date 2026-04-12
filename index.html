@@ -58,15 +58,27 @@
 
 <main style="max-width: 800px; margin: 0 auto; text-align: center; padding: 40px 20px;">
     
-   <div id="contenedor-visitas" style="float: left; margin: 0 20px 20px 0; text-align: center; background: #fff; padding: 15px; border-radius: 15px; border: 2px solid #004466; width: 110px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
-    <p style="margin: 0; font-size: 11px; color: #004466; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Tripulantes</p>
-    <span id="contador-real" style="font-size: 32px; font-weight: bold; color: #b8860b; display: block; margin-top: 5px;">0</span>
-</div>
-    <h2 style="font-size: 30px; color: #004466; margin-bottom: 30px;">Quien Soy</h2>
 
-    <img src="PRUEBA PAGINA WEB 2.jpg" alt="Julio Nieto Molina" style="max-width: 250px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-    
-    <div style="line-height: 1.8; color: #333; font-size: 18px; text-align: center;">
+  <div style="display: flex; align-items: flex-start; justify-content: center; width: 100%; max-width: 950px; margin: 20px auto 40px auto; clear: both;">
+
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-right: 50px; margin-left: -100px; padding-top: 0;">
+        
+        <div style="background: #ffffff; border: 1px solid #004466; border-radius: 4px; padding: 5px 12px; width: 165px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-family: 'Lora', serif; font-size: 9px; font-weight: bold; color: #004466; text-transform: uppercase;">Tripulantes Web</span>
+            <span style="font-family: sans-serif; font-size: 18px; font-weight: bold; color: #004466;">0</span>
+        </div>
+
+        <div style="background: #cc0000; border: 1px solid #700000; border-radius: 4px; padding: 5px 12px; width: 165px; color: white; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-family: 'Lora', serif; font-size: 9px; font-weight: bold; text-transform: uppercase;">Tripulantes YT</span>
+            <span style="font-family: sans-serif; font-size: 18px; font-weight: bold;">---</span>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <img src="PRUEBA PAGINA WEB 2.jpg" alt="Julio Nieto Molina" style="max-width: 400px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: block;">
+    </div>
+
+</div>
         <p>
             Julio Nieto Molina, nacido en Cartagena en Julio de 1970, con aire granadino, y un toque abaranero, aunque se declara aborigen de Mar de Cristal. Su primer poemario en vez la luz fue Agua Flamenca, autoeditado en Cartagena. Su segundo poemario es Soledad, locura y libertad (2022) editado por Aliar Ediciones. También ha autoeditado junto a un grupo de amigos un poemario titulado Quietud azul.
 Desde que aprendió a escribir ha tonteado con la escritura hasta realizar sus primeros relatillos y poemarios, todos ellos guardados en el baúl de su casa. Ha publicado además varios tebeos basados en relatos y relatillos gráficos, titulados Pato Ruti y sus Kompis, con unos personajes creados por el mismo... 
@@ -114,8 +126,13 @@ Así sin más, comienza una nueva aventura como es cada viñeta que empieza…
     sessionStorage.setItem('ya_contado', 'true');
   }
 </script>
-<footer style="text-align: center; padding: 50px 20px; border-top: 1px solid #eee; margin-top: 40px;">
-    <p style="color: #888; font-size: 14px;">© Creado por Borja Angosto Nieto Todos los derechos reservados</p>
+
+<footer style="width: 100%; clear: both; margin-top: 50px; padding: 40px 0; display: block;">
+    <div style="margin: 0 auto; width: fit-content; text-align: center;">
+        <p style="font-family: 'Lora', serif; font-size: 16px; color: #333; margin: 0;">
+            © creado por <strong style="color: #004466;">Borja Angosto Nieto</strong>
+        </p>
+    </div>
 </footer>
 
 </body>
