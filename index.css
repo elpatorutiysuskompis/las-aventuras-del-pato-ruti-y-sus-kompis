@@ -75,11 +75,22 @@ p {
     padding: 0 20px;
 }
 
-img[src*="julio"] {
+/* FOTO DE JULIO: IZQUIERDA EN PC, CENTRADA EN MÓVIL */
+/* FOTO DE JULIO: IZQUIERDA EN PC */
+img[src*="PRUEBA"], img[src*="PAGINA"], img[src*="WEB"] {
     width: 250px !important;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto;
+    height: auto;
+    float: left !important; /* Añadimos important para ganar la pelea */
+    margin: 10px 30px 15px 0 !important; 
+    border-radius: 15px;
+    display: block; /* Mejor block con float para que el texto fluya */
+}
+
+/* Limpieza para que lo de abajo no se suba donde no debe */
+.contenedor::after, main::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* AJUSTE MAESTRO PARA MÓVIL */
