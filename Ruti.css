@@ -236,3 +236,41 @@ footer strong, .pie-pagina strong {
         width: 85% !important;
     }
 }
+
+/* --- ARREGLO MAESTRO PARA MÓVIL --- */
+@media (max-width: 600px) {
+    /* El header necesita más espacio para que no se amontone todo */
+    .hero { 
+        height: auto !important; 
+        padding: 60px 20px !important; 
+    }
+
+    /* El menú: los enlaces uno al lado del otro pero más pequeños */
+    nav ul { 
+        justify-content: center !important; 
+        padding: 10px !important; 
+        flex-wrap: wrap !important; 
+    }
+    nav ul li { margin: 5px 10px !important; }
+    nav ul li a { font-size: 0.7rem !important; }
+
+    /* El título: bajamos el tamaño para que no ocupe toda la pantalla */
+    .header-content h1 { 
+        font-size: 1.4rem !important; 
+        line-height: 1.2 !important;
+        margin-top: 20px !important;
+    }
+
+    /* El Video de YouTube: que no se salga de la pantalla */
+    iframe, .video-container {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9; /* Esto mantiene la forma del video */
+    }
+
+    /* El texto de la biografía o descripciones */
+    .texto-contacto, .texto-presentacion {
+        padding: 20px !important;
+        font-size: 1rem !important;
+    }
+}
