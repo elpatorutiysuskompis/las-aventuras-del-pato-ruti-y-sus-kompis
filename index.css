@@ -171,3 +171,95 @@ header h1, .titulo-ruti {
         padding-top: 70px !important;
     }
 }
+
+/* EL BLOQUE BLANCO DEFINITIVO (SIN CAPAS RARAS) */
+footer, .pie-pagina {
+    width: 100% !important;
+    padding: 80px 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    background-color: transparent !important; /* QUITAMOS EL BLANCO DE AQUÍ */
+    clear: both !important;
+}
+
+footer p, .pie-pagina p, .copyright p {
+    background-color: #ffffff !important; /* EL BLANCO SOLO AQUÍ */
+    color: #000000 !important;
+    padding: 20px 50px !important; 
+    border-radius: 12px !important; /* Esquinas más suaves */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12) !important;
+    display: inline-block !important;
+    font-size: 17px !important;
+    border: 1px solid #eee !important;
+    margin: 0 !important;
+    font-family: Arial, sans-serif !important;
+}
+
+footer strong, .pie-pagina strong {
+    color: #000000 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+/* --- DISEÑO DE TARJETAS DE LIBROS (VUELVEN LAS TARJETAS) --- */
+.grid-libros {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 0 20px;
+}
+
+.libro-card {
+    background: white !important; /* El fondo blanco para que resalten */
+    border-radius: 15px; 
+    padding: 25px; 
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    border: 1px solid #d4c1a1;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.portada-libro { 
+    width: 100%; 
+    max-width: 190px; 
+    height: 270px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+    margin-bottom: 20px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+}
+
+.btn-comprar {
+    background: #003366 !important; 
+    color: white !important; 
+    text-decoration: none; 
+    padding: 12px 25px;
+    border-radius: 5px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    font-family: sans-serif;
+    display: inline-block;
+}
+
+/* EL FAMOSO BLOQUE BLANCO DEL FOOTER */
+.pie-pagina {
+    width: 100% !important;
+    padding: 80px 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    background-color: transparent !important;
+}
+
+.pie-pagina p {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 20px 50px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+    display: inline-block !important;
+    border: 1px solid #eee !important;
+}

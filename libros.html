@@ -124,7 +124,28 @@
             font-family: sans-serif;
         }
 
-        footer { text-align: center; padding: 40px; color: #444; font-size: 0.9rem; font-weight: bold; }
+        /* --- EL BLOQUE BLANCO PARA LIBROS --- */
+.pie-pagina {
+    width: 100% !important;
+    padding: 80px 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    background-color: transparent !important;
+    clear: both !important;
+}
+
+.pie-pagina p {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 20px 50px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+    display: inline-block !important;
+    font-size: 17px !important;
+    border: 1px solid #eeeeee !important;
+    margin: 0 !important;
+    font-family: Arial, sans-serif !important;
+}
     </style>
 </head>
 <body>
@@ -173,11 +194,9 @@
         <span class="btn-comprar" style="background: #999; cursor: not-allowed; color: white; padding: 12px 25px; display: inline-block; border-radius: 5px;">PRÓXIMAMENTE</span>
     </div>
 </main>
-<footer style="text-align: center; padding: 60px 0 40px 0; width: 100%; clear: both;">
-    <p style="font-family: 'Georgia', serif; color: #333; font-size: 18px; margin: 0; letter-spacing: 1px;">
-        © creado por <strong>Borja Angosto Nieto</strong>
-    </p>
-</footer>
+<footer class="pie-pagina">
+        <p>© creado por <strong>Borja Angosto Nieto</strong></p>
+    </footer>
 
 </body>
 </html>
