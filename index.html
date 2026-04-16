@@ -180,32 +180,47 @@ Así sin más, comienza una nueva aventura como es cada viñeta que empieza…
         <p>&copy; 2026 CREADO POR BORJA - TRIPULANTES DE RUTI</p>
     </footer>
 
+    
     <script>
-        const firebaseConfig = {
-            databaseURL: "https://elpatorutiysuskompis-b75dc-default-rtdb.firebaseio.com/"
-        };
-        
-        firebase.initializeApp(firebaseConfig);
-        const database = firebase.database();
-        const visitsRef = database.ref('visitas');
+    const firebaseConfig = { databaseURL: "https://elpatorutiysuskompis-b75dc-default-rtdb.firebaseio.com/" };
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+    const visitsRef = database.ref('visitas');
 
-        const esLocal = window.location.hostname.includes("localhost") || 
-                        window.location.hostname.includes("127.0.0.1") || 
-                        window.location.protocol === "file:";
+    // 1. Miramos si estamos en tu ordenador (Localhost)
+    const esLocal = window.location.hostname.includes("localhost") || 
+                    window.location.hostname.includes("127.0.0.1") || 
+                    window.location.protocol === "file:";
 
-        if (!esLocal) {
-            visitsRef.transaction((currentValue) => {
-                return (currentValue || 0) + 1;
-            });
+    // 2. Miramos si ya hemos activado el "Modo Jefe" antes
+    let modoJefe = localStorage.getItem("modoJefe") === "activado";
+
+    function contarVisita() {
+        if (!esLocal && !modoJefe && !window.location.search.includes("test")) {
+            visitsRef.transaction(c => (c || 0) + 1);
+            console.log("Visita real contada.");
+        } else {
+            console.log("Modo Jefe activo: No se cuenta visita.");
         }
+    }
 
-        visitsRef.on('value', (snapshot) => {
-            const contadorElemento = document.getElementById('contador');
-            if (contadorElemento) {
-                contadorElemento.innerText = snapshot.val() || 0;
-            }
-        });
-    </script>
+    // Ejecutamos la función al cargar
+    contarVisita();
+
+    // 3. TRUCO SECRETO: Si pulsas la tecla 't' en tu teclado, 
+    // la web te reconocerá como jefe para siempre en ese navegador.
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 't' || e.key === 'T') {
+            localStorage.setItem("modoJefe", "activado");
+            alert("¡Modo Jefe Activado! A partir de ahora tus visitas no contarán en este navegador.");
+            location.reload(); // Recargamos para aplicar
+        }
+    });
+
+    visitsRef.on('value', s => { 
+        document.getElementById('contador').innerText = s.val() || 0; 
+    });
+</script>
 </body>
 </html>
 
