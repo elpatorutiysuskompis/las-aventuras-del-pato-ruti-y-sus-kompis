@@ -6,14 +6,11 @@
     <title>Las Aventuras del Pato Ruti</title>
     <link rel="stylesheet" href="index.css">
     <script src="https://apis.google.com/js/platform.js"></script>
-    
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
     
     <style>
         body { margin: 0; padding: 0; background-color: #d2b48c; font-family: Arial, sans-serif; }
-
-        /* HEADER + LÍNEA DORADA */
         header {
             background-image: url('logo.jpg');
             background-size: cover;
@@ -26,8 +23,6 @@
             border-bottom: 5px solid #d4af37;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
-
-        /* NAV ULTRA FINO */
         .contenedor-nav {
             width: 100%;
             display: flex;
@@ -35,7 +30,6 @@
             padding: 5px 0;
             background: rgba(0,0,0,0.5);
         }
-
         .menu-links {
             display: flex;
             list-style: none;
@@ -43,7 +37,6 @@
             margin: 0;
             padding: 0;
         }
-
         .menu-links a {
             text-decoration: none;
             color: white;
@@ -52,7 +45,6 @@
             font-size: 0.7rem;
             text-transform: uppercase;
         }
-
         .titulo-principal {
             color: white;
             text-align: center;
@@ -62,25 +54,20 @@
             text-shadow: 3px 3px 6px #000;
             padding: 15px 10px;
         }
-
-        /* CONTENIDO */
         .seccion-contenido {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
             padding: 20px;
         }
-
-        /* FILA PARA YOUTUBE Y CONTADOR JUNTOS */
         .fila-widgets {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px; /* Espacio entre el botón y el contador */
-            flex-wrap: wrap; /* Por si en móviles muy pequeños no caben en una línea */
+            gap: 20px; 
+            flex-wrap: wrap; 
             margin-bottom: 25px;
         }
-
         .caja-widget {
             background: rgba(255, 255, 255, 0.2);
             padding: 10px 15px;
@@ -91,20 +78,11 @@
             align-items: center;
             min-width: 140px;
         }
-
-        .etiqueta-widget {
-            font-family: 'Arial Black', sans-serif;
-            font-size: 0.65rem;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
         .numero-contador {
             font-family: 'Arial Black', sans-serif;
             font-size: 1.2rem;
             color: #000;
         }
-
         footer {
             background-color: white;
             color: black;
@@ -114,11 +92,9 @@
             font-size: 0.75rem;
             border-top: 2px solid #000;
         }
-
         @media (max-width: 600px) {
             header { min-height: 140px; }
             .menu-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
-            .menu-links li:last-child { grid-column: span 3; }
             .fila-widgets { gap: 10px; }
         }
     </style>
@@ -139,88 +115,62 @@
     </header>
 
     <main class="seccion-contenido">
-        
         <div class="fila-widgets">
             <div class="caja-widget">
-                <span class="etiqueta-widget">SÍGUENOS:</span>
-                <div style="transform: scale(0.8); transform-origin: center;">
-                    <div class="g-ytsubscribe" data-channelid="UCDJxhJg8hK5650HCzFznZ6w" data-layout="default" data-count="default"></div>
-                </div>
+                <span style="font-family:'Arial Black'; font-size:0.65rem;">SÍGUENOS:</span>
+                <div style="transform: scale(0.8);"><div class="g-ytsubscribe" data-channelid="UCDJxhJg8hK5650HCzFznZ6w" data-layout="default" data-count="default"></div></div>
             </div>
-
             <div class="caja-widget">
-                <span class="etiqueta-widget">VISITAS WEB:</span>
+                <span style="font-family:'Arial Black'; font-size:0.65rem;">VISITAS WEB:</span>
                 <span id="contador" class="numero-contador">...</span>
             </div>
+            <div id="contenedor-short-efimero"></div>
         </div>
         
         <div style="font-family: 'Arial Black'; font-size: 1.6rem; margin-bottom: 15px;">Julio Nieto Molina</div>
+        <img src="PRUEBA PAGINA WEB 2.jpg" alt="" style="max-width: 100%; border-radius:15px;">
         
-       
-       
-       <img src="PRUEBA PAGINA WEB 2.jpg" alt="">
-       
-       
-       
-        <div style="line-height: 1.6; text-align: justify; max-width: 600px; margin: 0 auto 30px;">
-        <P>Julio Nieto Molina, nacido en Cartagena en Julio de 1970, con aire granadino, y un toque abaranero, aunque se declara aborigen de Mar de Cristal. Su primer poemario en ver la luz fue Agua Flamenca, autoeditado en Cartagena. Su segundo poemario es Soledad, locura y libertad (2022) editado por Aliar Ediciones. También ha autoeditado junto a un grupo de amigos un poemario titulado Quietud azul.
-Desde que aprendió a escribir ha tonteado con la escritura hasta realizar sus primeros relatillos y poemarios, todos ellos guardados en el baúl de su casa. Ha publicado además varios tebeos basados en relatos y relatillos gráficos, titulados Pato Ruti y sus Kompis, con unos personajes creados por el mismo... 
-RUTI nació dibujando narices, en una habitación mágica, el comedor de la casa de sus papis.
-Nació entre apuntes de Farmacia, pues es un dibujo del nuevo siglo XXI, nació no me acuerdo muy bien pero por allá en los albores de finales del 2001 o principios del 2002.
-El primero fue RUTI, luego fueron llegando el resto, DURRI, el gato DÚ,..pasando por GORRI, en el 2020 y por ahora el último es HELL en el 2022.
-RUTI Y SUS KOMPIS, nacieron como una necesidad de expresar mi mundo interior y no es solo un dibujo o un mensaje es ponerle una nota de humor a este mundo, a este mundo que a veces es una mierda y otras veces una maravilla y como dice RUTI esta vida es una mierda maravillosa.
-RUTI es un pato del Mar Menor, de Mar de Cristal, aunque a veces se puede confundir con un loro, de como parlotea, pero no es de una gran verborrea, si no breve y conciso, como todos los Kompis y también como su creador, el menda lerenda, que escribe estas líneas.
-Así sin más, comienza una nueva aventura como es cada viñeta que empieza…
-
-</P>
+        <div style="line-height: 1.6; text-align: justify; max-width: 600px; margin: 20px auto 30px;">
+            <p>Julio Nieto Molina, nacido en Cartagena en Julio de 1970, con aire granadino, y un toque abaranero, aunque se declara aborigen de Mar de Cristal. Su primer poemario en ver la luz fue Agua Flamenca, autoeditado en Cartagena. Su segundo poemario es Soledad, locura y libertad (2022) editado por Aliar Ediciones. También ha autoeditado junto a un grupo de amigos un poemario titulado Quietud azul.
+            Desde que aprendió a escribir ha tonteado con la escritura hasta realizar sus primeros relatillos y poemarios, todos ellos guardados en el baúl de su casa. Ha publicado además varios tebeos basados en relatos y relatillos gráficos, titulados Pato Ruti y sus Kompis, con unos personajes creados por el mismo... 
+            RUTI nació dibujando narices, en una habitación mágica, el comedor de la casa de sus papis.
+            Nació entre apuntes de Farmacia, pues es un dibujo del nuevo siglo XXI, nació no me acuerdo muy bien pero por allá en los albores de finales del 2001 o principios del 2002.
+            El primero fue RUTI, luego fueron llegando el resto, DURRI, el gato DÚ,..pasando por GORRI, en el 2020 y por ahora el último es HELL en el 2022.
+            RUTI Y SUS KOMPIS, nacieron como una necesidad de expresar mi mundo interior y no es solo un dibujo o un mensaje es ponerle una nota de humor a este mundo, a este mundo que a veces es una mierda y otras veces una maravilla y como dice RUTI esta vida es una mierda maravillosa.
+            RUTI es un pato del Mar Menor, de Mar de Cristal, aunque a veces se puede confundir con un loro, de como parlotea, pero no es de una gran verborrea, si no breve y conciso, como todos los Kompis y también como su creador, el menda lerenda, que escribe estas líneas.
+            Así sin más, comienza una nueva aventura como es cada viñeta que empieza…</p>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 CREADO POR BORJA - TRIPULANTES DE RUTI</p>
-    </footer>
+    <footer><p>&copy; 2026 CREADO POR BORJA - TRIPULANTES DE RUTI</p></footer>
 
-    
     <script>
-    const firebaseConfig = { databaseURL: "https://elpatorutiysuskompis-b75dc-default-rtdb.firebaseio.com/" };
-    firebase.initializeApp(firebaseConfig);
-    const database = firebase.database();
-    const visitsRef = database.ref('visitas');
+        const firebaseConfig = { databaseURL: "https://elpatorutiysuskompis-b75dc-default-rtdb.firebaseio.com/" };
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+        const visitsRef = database.ref('visitas');
+        const esLocal = window.location.hostname.includes("localhost") || window.location.protocol === "file:";
+        let modoJefe = localStorage.getItem("modoJefe") === "activado";
+        if (!esLocal && !modoJefe) { visitsRef.transaction(c => (c || 0) + 1); }
+        window.addEventListener('keydown', (e) => { if (e.key === 't' || e.key === 'T') { localStorage.setItem("modoJefe", "activado"); location.reload(); } });
+        visitsRef.on('value', s => { document.getElementById('contador').innerText = s.val() || 0; });
 
-    // 1. Miramos si estamos en tu ordenador (Localhost)
-    const esLocal = window.location.hostname.includes("localhost") || 
-                    window.location.hostname.includes("127.0.0.1") || 
-                    window.location.protocol === "file:";
-
-    // 2. Miramos si ya hemos activado el "Modo Jefe" antes
-    let modoJefe = localStorage.getItem("modoJefe") === "activado";
-
-    function contarVisita() {
-        if (!esLocal && !modoJefe && !window.location.search.includes("test")) {
-            visitsRef.transaction(c => (c || 0) + 1);
-            console.log("Visita real contada.");
-        } else {
-            console.log("Modo Jefe activo: No se cuenta visita.");
+        const HORA_SUBIDA = "2026-04-26T16:05:00"; 
+        const ID_SHORT = "oo5Z9dtVnRw"; 
+        function actualizarContenido() {
+            const ahora = new Date();
+            const inicio = new Date(HORA_SUBIDA);
+            const diffMinutos = (ahora - inicio) / (1000 * 60);
+            const contenedor = document.getElementById('contenedor-short-efimero');
+            if (diffMinutos >= 0 && diffMinutos < 5) {
+                contenedor.innerHTML = `<div class="caja-widget" style="border: 2px solid red;">
+                    <span style="color:red; font-size:0.6rem; font-family:'Arial Black';">🔥 EXCLUSIVO (${Math.ceil(5 - diffMinutos)} min)</span>
+                    <iframe width="160" height="280" src="https://www.youtube.com/embed/${ID_SHORT}?autoplay=1&mute=1" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+                </div>`;
+            } else { contenedor.innerHTML = ""; }
         }
-    }
-
-    // Ejecutamos la función al cargar
-    contarVisita();
-
-    // 3. TRUCO SECRETO: Si pulsas la tecla 't' en tu teclado, 
-    // la web te reconocerá como jefe para siempre en ese navegador.
-    window.addEventListener('keydown', (e) => {
-        if (e.key === 't' || e.key === 'T') {
-            localStorage.setItem("modoJefe", "activado");
-            alert("¡Modo Jefe Activado! A partir de ahora tus visitas no contarán en este navegador.");
-            location.reload(); // Recargamos para aplicar
-        }
-    });
-
-    visitsRef.on('value', s => { 
-        document.getElementById('contador').innerText = s.val() || 0; 
-    });
-</script>
+        setInterval(actualizarContenido, 1000);
+        actualizarContenido();
+    </script>
 </body>
 </html>
-
